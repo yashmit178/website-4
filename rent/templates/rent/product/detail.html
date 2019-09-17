@@ -1,0 +1,18 @@
+{% extends 'rent/base.html' %}
+{% load static %}
+{% block title %}
+{{product.name}}
+{% endblock %}
+
+{% block content %}
+<div>
+    {{product.name}}
+    <a href="{{ product.get_absolute_url }}">
+        <img src="{% if product.image %} {{ product.image.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}" alt="..." style="height: 200px; width: auto">
+    </a>
+
+    <h4>₹{{product.price}}</h4>
+    <h4>{{product.description}}</h4>
+    <h4>{{product.size}}</h4>
+</div>
+{% endblock %}
