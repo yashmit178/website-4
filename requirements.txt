@@ -1,3 +1,5 @@
+You will need:
+
 Django==2.2.6
 Pillow==6.2.1
 psycopg2==2.8.4
